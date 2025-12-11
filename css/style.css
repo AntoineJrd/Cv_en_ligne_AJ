@@ -18,6 +18,7 @@ section .heading {
 }
 section .heading h2{
     text-transform: uppercase;
+    color: white;
 }
 section .heading h3{
     color: white;
