@@ -18,11 +18,21 @@ section .heading {
 }
 section .heading h2{
     text-transform: uppercase;
+    color: white;
+}
+section .heading h3{
+    color: white;
+    padding-bottom: 20px;
+}
+section .heading p{
+    color: white;
+    text-align: center;
+
 }
 .divider {
     width: 100px;
     height: 2px;
-    background-color: #689D71;
+    background-color: #0652B0;
     margin: 0 auto 20px;   
 }
 .divider.white {
@@ -34,7 +44,7 @@ ul {
 
 /* NAVBAR */
 .navbar {
-    background-color: #689D71;
+    background-color: #0652B0;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -51,13 +61,13 @@ ul {
 .nav-link.active,
 .nav-link:hover {
     background-color: white;
-    color: #689D71 !important;
+    color: #0652B0 !important;
 }
 
 
 /* ABOUT */
 #about {
-    background-color: #689D71;
+    background-color: #135BB4;
 }
 .profile-picture {
     text-align: center;
@@ -82,31 +92,78 @@ ul {
 }
 .button1:hover {
     background: white;
-    color: #689D71;
+    color: #0652B0;
 }
 
 /* SKILLS */
 #skills .heading h2 {
-    color: #689D71;
+    color: #0652B0;
 }
-#skills .progress {
-    height: 45px;
-    margin: 30px 20px;
+/* Conteneur Flexbox pour les outils */
+.tools-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Important pour le mobile */
+    gap: 30px; /* Espace entre les icônes */
 }
-#skills .progress:last-child {
-    margin-bottom: 0px;
+
+/* Chaque outil individuel */
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px; /* Largeur fixe pour alignement propre */
+    transition: transform 0.3s ease;
 }
-#skills .progress-bar {
-    background-color: #689D71;
+
+/* L'icône */
+.tool-item i {
+    font-size: 2.5rem; /* Taille de l'icône */
+    color: #555; /* Gris foncé par défaut */
+    margin-bottom: 10px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
 }
-#skills .progress-bar h5 {
-    text-shadow: 1px 1px 1px #000;
-    margin-bottom: 3px;
+
+/* Le texte sous l'icône */
+.tool-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #135BB4;
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
+
+/* --- Effets au survol --- */
+.tool-item:hover {
+    transform: translateY(-5px); /* Monte légèrement */
+}
+
+/* Gère l'affichage côte à côte des deux icônes */
+.dual-icons {
+    display: flex;
+    gap: 10px; /* Espace entre l'icône HTML et CSS */
+    margin-bottom: 10px; /* Espace entre les icônes et le texte */
+}
+
+/* On annule la marge individuelle des icônes quand elles sont groupées */
+.dual-icons i {
+    margin-bottom: 0; 
+}
+/* Couleurs spécifiques au survol */
+.tool-item:hover .dual-icons i.fa-html5 { color: #e34c26; }
+.tool-item:hover .dual-icons i.fa-css3-alt { color: #264de4; }
+.tool-item:hover i.fa-wordpress { color: #21759b; }
+.tool-item:hover i.fa-python { color: #306998; }
+.tool-item:hover i.fa-file-excel { color: #1D6F42; }
+.tool-item:hover i.fa-database { color: #00758f; } /* SQL */
+.tool-item:hover i.fa-chart-column { color: #F2C811; } /* PowerBI Jaune */
+.tool-item:hover i.fa-magnifying-glass-chart { color: #4285F4; } /* Looker Bleu */
+.tool-item:hover i.fa-share-nodes { color: #ea4b71; } /* n8n Rose/Rouge */
 
 /* EXPERIENCE */
 #experience {
-    background-color: #689D71;
+    background-color: #135BB4;
 }
 #experience .heading h2 {
     color: white;
@@ -138,7 +195,7 @@ ul {
     clear: both;
 }
 .timeline li .timeline-badge {
-    color: #689D71;
+    color: #135BB4;
     width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -195,12 +252,12 @@ ul {
     font-size: 20px;
 }
 .timeline-heading h4 {
-    color: #689D71;
+    color: #0652B0;
 }
 
 /* EDUCATION */
 #education .heading h2 {
-    color: #689D71;
+    color: #0652B0;
     margin: 15px 0px;
 }
 .education-block {
@@ -222,7 +279,7 @@ ul {
     font-size: 35px;
 }
 .education-block h3 {
-    color: #689D71;
+    color: #0652B0;
     margin: 15px 0px;
 }
 .education-block h4 {
@@ -232,7 +289,7 @@ ul {
 
  /* PORTFOLIO */
  #portfolio {
-     background-color:#689D71;
+     background-color:#135BB4;
  }
  #portfolio .heading h2 {
     color: white;
@@ -256,7 +313,7 @@ ul {
      background-color:white;
  }
  #liens .heading h2 {
-    color: #689D71;
+    color: #0652B0;
 }
 #liens img {
     width: 100%;
@@ -278,7 +335,7 @@ footer {
     padding: 20px 0 40px;
 }
 footer span {
-    color: #689D71;
+    color: #135BB4;
     font-size: 25px;
     line-height: 35px;
 }
